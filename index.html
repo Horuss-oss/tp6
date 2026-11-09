@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+   <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <!-- Indispensable pour le responsive sur mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Le Kef</title>
+    <!-- ===== 1. BARRE DE NAVIGATION ===== -->
+    <header class="navbar">
+        <a href="#" class="logo">Discover Le Kef</a>
+        <nav>
+            <ul class="menu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#offres">Offres</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ===== 2. HERO (bannière d'accueil) ===== -->
+    <section class="hero" id="accueil">
+        <h1>Découvrez la beauté du Kef</h1>
+        <p>Circuits, hébergements et activités au nord-ouest de la Tunisie.</p>
+        <a href="#offres" class="btn" id="bto">Voir nos offres</a>
+    </section>
+    <!-- ===== 3. OFFRES : 3 cartes ===== -->
+    <section class="offres" id="offres">
+        <h2>Nos offres</h2>
+        <div class="grille">
+            <article class="carte">
+                <img src="https://picsum.photos/400/250?random=1" alt="Kasbah">
+                <div class="carte-corps">
+                    <h3>Circuit Kasbah</h3>
+                    <p>Visite guidée de la vieille ville du Kef.</p>
+                    <span class="prix">45 DT</span>
+                </div>
+            </article>
+            <article class="carte">
+                <img src="https://picsum.photos/400/250?random=2" alt="Dyr">
+                <div class="carte-corps">
+                    <h3>Séjour au Dyr</h3>
+                    <p>Week-end nature dans les montagnes du Dyr.</p>
+                    <span class="prix">120 DT</span>
+                </div>
+            </article>
+            <article class="carte">
+                <img src="https://picsum.photos/400/250?random=3" alt="Jugurtha">
+                <div class="carte-corps">
+                    <h3>Randonnée Jugurtha</h3>
+                    <p>Marche guidée vers la table de Jugurtha.</p>
+                    <span class="prix">60 DT</span>
+                </div>
+            </article>
+        </div>
+    </section>
+    <!-- ===== 4. CONTACT : formulaire validé en JavaScript ===== -->
+    <section class="contact" id="contact">
+        <h2>Contactez-nous</h2>
+        <!-- novalidate : on désactive la validation du navigateur, on utilise la nôtre -->
+        <form id="form-contact" novalidate>
+            <label for="nom">Nom</label><br>
+            <input type="text" id="nom" placeholder="Votre nom"><br>
+            <span class="erreur"></span> <!-- le message d'erreur s'affichera ici -->
+            <label for="email">Email</label><br>
+            <input type="email" id="email" placeholder="vous@exemple.com"><br>
+            <span class="erreur"></span>
+            <label for="msg">Message</label><br>
+            <textarea id="msg" rows="4" ></textarea><br>
+            <span class="erreur"></span>
+            <button type="submit" class="btn">Envoyer</button>
+            <p id="succes" class="succes" hidden>Merci ! Votre message a bien été envoyé.</p>
+        </form>
+    </section>
